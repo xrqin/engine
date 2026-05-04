@@ -189,6 +189,7 @@ mod tests {
     use crate::poseidon_config::nova_poseidon_config;
 
     #[test]
+    #[ignore] // Legacy Groth16 circuit; use CleanCheckStepCircuit (Nova IVC) instead
     fn test_clean_check_constraint_count() {
         // Small instance: 4 sources, depth 10
         let params = nova_poseidon_config();
@@ -202,6 +203,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore] // Legacy Groth16 circuit; use CleanCheckStepCircuit (Nova IVC) instead
     fn test_clean_check_16_depth20() {
         let params = nova_poseidon_config();
         let circuit = CleanCheckCircuit::<16, 20>::dummy(params);

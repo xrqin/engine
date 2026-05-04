@@ -7,18 +7,24 @@
 //! - `clean_check_circuit`: R_SRC_CLEAN — Groth16 Merkle membership check
 //! - `frontier_gadget`: Shared R1CS gadgets for binary append frontier
 
+pub mod bind_sorted_scan_step_circuit;
 pub mod clean_check_circuit;
 pub mod clean_check_step_circuit;
+pub mod delta_disjoint_step_circuit;
 pub mod frontier_gadget;
 pub mod merge2_step_circuit;
 pub mod merge_circuit;
+pub mod ordered_set_insert_step_circuit;
 pub mod params;
 pub mod poseidon_config;
 pub mod scan_step_circuit;
 
+pub use bind_sorted_scan_step_circuit::BindSortedScanStepCircuit;
 pub use clean_check_circuit::CleanCheckCircuit;
 pub use clean_check_step_circuit::CleanCheckStepCircuit;
+pub use delta_disjoint_step_circuit::DeltaDisjointStepCircuit;
 pub use merge2_step_circuit::Merge2StepCircuit;
 pub use merge_circuit::{MergeExternalInputs, MergeStepCircuit, MERGE_STATE_LEN};
+pub use ordered_set_insert_step_circuit::OrderedSetInsertStepCircuit;
 pub use params::{DeciderParams, NovaParams};
 pub use scan_step_circuit::ScanStepCircuit;

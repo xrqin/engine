@@ -30,3 +30,4 @@ release/
 corpus
 crash-*
 *.tgz
+src/source-compliance/nova-ivc/target/
